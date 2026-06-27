@@ -1,0 +1,20 @@
+[ 2026-06-27 23:23:09,130 ] 19 root - INFO - Starting the data ingestion process...
+[ 2026-06-27 23:23:09,147 ] 23 root - INFO - Successfully read the raw tracker CSV file into a DataFrame
+[ 2026-06-27 23:23:09,149 ] 27 root - INFO - Dropped records with missing targets. Rows remaining for pipeline: 315
+[ 2026-06-27 23:23:09,155 ] 36 root - INFO - Initiating train-test split...
+[ 2026-06-27 23:23:09,164 ] 43 root - INFO - Data ingestion and splitting successfully completed!
+[ 2026-06-27 23:23:09,191 ] 64 root - INFO - Read train and test data completed
+[ 2026-06-27 23:23:09,191 ] 75 root - INFO - Obtaining preprocessing object
+[ 2026-06-27 23:23:09,191 ] 43 root - INFO - Numerical columns scaling/imputing: ['aa_intelligence_index', 'aa_coding_index', 'composite_benchmark', 'parameter_count', 'output_tokens_per_second', 'time_to_first_token_s']
+[ 2026-06-27 23:23:09,192 ] 44 root - INFO - Categorical columns encoding: ['provider', 'is_open_source']
+[ 2026-06-27 23:23:09,193 ] 84 root - INFO - Applying preprocessing object on training and testing dataframes
+[ 2026-06-27 23:23:09,221 ] 95 root - INFO - Saving preprocessing object configuration...
+[ 2026-06-27 23:23:09,222 ] 24 root - INFO - Splitting training and testing input data
+[ 2026-06-27 23:23:09,222 ] 45 root - INFO - Starting model evaluation loop...
+[ 2026-06-27 23:23:09,227 ] 57 root - INFO - Linear Regression evaluation complete. Score: 0.3938
+[ 2026-06-27 23:23:09,229 ] 57 root - INFO - Lasso evaluation complete. Score: -0.0085
+[ 2026-06-27 23:23:09,231 ] 57 root - INFO - Ridge evaluation complete. Score: 0.4620
+[ 2026-06-27 23:23:09,346 ] 57 root - INFO - Random Forest evaluation complete. Score: 0.6479
+[ 2026-06-27 23:23:09,399 ] 57 root - INFO - Gradient Boosting evaluation complete. Score: 0.5065
+[ 2026-06-27 23:23:09,467 ] 57 root - INFO - XGBoost evaluation complete. Score: 0.5499
+[ 2026-06-27 23:23:09,467 ] 71 root - INFO - Best model discovered: Random Forest with R2: 0.6479

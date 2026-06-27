@@ -1,0 +1,24 @@
+[ 2026-06-28 01:16:01,142 ] 19 root - INFO - Starting the data ingestion process...
+[ 2026-06-28 01:16:01,158 ] 23 root - INFO - Successfully read the raw tracker CSV file into a DataFrame
+[ 2026-06-28 01:16:01,168 ] 27 root - INFO - Dropped records with missing targets. Rows remaining for pipeline: 315
+[ 2026-06-28 01:16:01,184 ] 36 root - INFO - Initiating train-test split...
+[ 2026-06-28 01:16:01,204 ] 43 root - INFO - Data ingestion and splitting successfully completed!
+[ 2026-06-28 01:16:01,254 ] 64 root - INFO - Read train and test data completed
+[ 2026-06-28 01:16:01,254 ] 75 root - INFO - Obtaining preprocessing object
+[ 2026-06-28 01:16:01,255 ] 43 root - INFO - Numerical columns scaling/imputing: ['aa_intelligence_index', 'aa_coding_index', 'composite_benchmark', 'parameter_count', 'output_tokens_per_second', 'time_to_first_token_s']
+[ 2026-06-28 01:16:01,255 ] 44 root - INFO - Categorical columns encoding: ['provider', 'is_open_source']
+[ 2026-06-28 01:16:01,256 ] 84 root - INFO - Applying preprocessing object on training and testing dataframes
+[ 2026-06-28 01:16:01,309 ] 95 root - INFO - Saving preprocessing object configuration...
+[ 2026-06-28 01:16:01,311 ] 26 root - INFO - Splitting training and testing input data arrays
+[ 2026-06-28 01:16:01,311 ] 71 root - INFO - Starting Cross-Validation grid search tuning for: Random Forest
+[ 2026-06-28 01:16:26,130 ] 92 root - INFO - Finished Random Forest. Best CV Score achieved on testing holdout: 0.6342
+[ 2026-06-28 01:16:26,130 ] 71 root - INFO - Starting Cross-Validation grid search tuning for: Gradient Boosting
+[ 2026-06-28 01:16:26,931 ] 92 root - INFO - Finished Gradient Boosting. Best CV Score achieved on testing holdout: 0.5065
+[ 2026-06-28 01:16:26,931 ] 71 root - INFO - Starting Cross-Validation grid search tuning for: XGBoost
+[ 2026-06-28 01:16:27,458 ] 92 root - INFO - Finished XGBoost. Best CV Score achieved on testing holdout: 0.4911
+[ 2026-06-28 01:16:27,458 ] 71 root - INFO - Starting Cross-Validation grid search tuning for: Linear Regression
+[ 2026-06-28 01:16:27,487 ] 92 root - INFO - Finished Linear Regression. Best CV Score achieved on testing holdout: 0.3938
+[ 2026-06-28 01:16:27,487 ] 108 root - INFO - Absolute champion model discovered: Random Forest with R2 score: 0.6342
+[ 2026-06-28 01:16:27,502 ] 19 root - INFO - Loading preprocessor and model artifacts...
+[ 2026-06-28 01:16:27,551 ] 23 root - INFO - Transforming incoming web features...
+[ 2026-06-28 01:16:27,559 ] 27 root - INFO - Executing prediction loop...

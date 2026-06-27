@@ -1,0 +1,9 @@
+[ 2026-06-27 22:54:40,300 ] 19 root - INFO - Starting the data ingestion process...
+[ 2026-06-27 22:54:40,306 ] 23 root - INFO - Successfully read the raw tracker CSV file into a DataFrame
+[ 2026-06-27 22:54:40,318 ] 32 root - INFO - Initiating train-test split...
+[ 2026-06-27 22:54:40,339 ] 39 root - INFO - Data ingestion and splitting successfully completed!
+[ 2026-06-27 22:54:40,729 ] 63 root - INFO - Read train and test data completed
+[ 2026-06-27 22:54:40,729 ] 76 root - INFO - Obtaining preprocessing object
+[ 2026-06-27 22:54:40,729 ] 42 root - INFO - Numerical columns scaling/imputing: ['aa_intelligence_index', 'aa_coding_index', 'composite_benchmark', 'parameter_count', 'output_tokens_per_second', 'time_to_first_token_s']
+[ 2026-06-27 22:54:40,732 ] 43 root - INFO - Categorical columns encoding: ['provider', 'is_open_source']
+[ 2026-06-27 22:54:40,737 ] 86 root - INFO - Applying preprocessing object on training and testing dataframes

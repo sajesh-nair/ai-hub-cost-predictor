@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: ai_inference_cost_predictor
+Version: 0.0.1
+Author: Sajesh Nair
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: python-dotenv
+Dynamic: author
+Dynamic: requires-dist
