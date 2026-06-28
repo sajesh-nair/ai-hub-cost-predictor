@@ -75,7 +75,7 @@
     <p>Enter the model architectural telemetry to calculate the fair market prediction per million tokens.</p>
     <hr style="border-color: #333; margin-bottom: 20px;">
 
-    <form action="{{ url_for('predict_datapoint') }}" method="POST">
+    <form action="/predict" method="POST">
         <div class="form-group">
             <label>Absolute Intelligence Index (0 - 100)</label>
             <input type="number" step="0.01" name="aa_intelligence_index" placeholder="e.g. 78.4" required>
