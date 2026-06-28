@@ -25,7 +25,8 @@ async def read_form(request: Request):
     )
 
 # 2. Prediction Route: Capture form data, execute pipeline, and return result
-@app.post("/", response_class=HTMLResponse)
+# --- FIXED: Changed route decorator from "/" to "/predict" to match home.html form action ---
+@app.post("/predict", response_class=HTMLResponse)
 async def predict_datapoint(
     request: Request,
     aa_intelligence_index: float = Form(...),
