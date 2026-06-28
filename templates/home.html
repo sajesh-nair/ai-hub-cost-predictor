@@ -9,9 +9,12 @@
             background-color: #121212;
             color: #e0e0e0;
             margin: 0;
-            padding: 40px;
+            padding: 40px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
         .container {
             background-color: #1e1e1e;
@@ -20,6 +23,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.5);
             max-width: 600px;
             width: 100%;
+            margin-bottom: 30px;
         }
         h2 { color: #4f46e5; margin-top: 0; }
         .form-group {
@@ -66,6 +70,27 @@
         }
         .result-title { color: #22c55e; font-weight: bold; margin-bottom: 5px; }
         .result-val { font-size: 24px; font-weight: bold; }
+        
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: auto;
+            border-top: 1px solid #2d2d2d;
+            padding-top: 15px;
+            width: 100%;
+            max-width: 600px;
+        }
+        .footer a {
+            color: #4f46e5;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+            color: #6366f1;
+        }
     </style>
 </head>
 <body>
@@ -129,6 +154,11 @@
         <div class="result-val">${{ results }} <span style="font-size: 14px; font-weight: normal; color: #aaa;">USD / 1M Tokens</span></div>
     </div>
     {% endif %}
+</div>
+
+<div class="footer">
+    Developed by <a href="https://huggingface.co/spaces/sajesh-nair-ai/inference-cost-predictor" target="_blank">Sajesh Nair</a> | 
+    Dataset sourced from <a href="https://www.kaggle.com/datasets/kanchana1990/llm-price-performance-tracker-march-2026" target="_blank">Kaggle</a>
 </div>
 
 </body>
