@@ -73,5 +73,8 @@ async def predict_datapoint(
         return HTMLResponse(content=f"<h3>Error in pipeline execution: {e}</h3>", status_code=500)
 
 if __name__ == "__main__":
+    # Retrieve port from environment or fallback to Hugging Face default 7860
+    port = int(os.environ.get("PORT", 7860))
+    
     # Launch ASGI web server using uvicorn
-    uvicorn.run("app:app", host="0.0.0.0", port=5000, reload=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=port)

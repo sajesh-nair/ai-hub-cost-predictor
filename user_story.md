@@ -1,11 +1,21 @@
-Week 6: Built an AI cost predictor web app from scratch.
+Week 6: Built an Inference cost predictor web app from scratch.
 
-When businesses build with AI, their biggest headache is budgeting. Huge models are smart but expensive; small ones are cheap but less capable. I wanted to see if we could predict a model’s market price based purely on its "specs"—like size, speed, and intelligence.
+Budgeting for LLMs is a massive headache for businesses. To solve this, I built a machine learning pipeline that predicts an API's market price based entirely on its technical specs.
 
-Using a Kaggle dataset, I built a machine learning pipeline. Because market prices are wildly inconsistent, I applied a log math transformation to keep data stable. I trained a Random Forest algorithm and refined it with 5-Fold Cross-Validation so the predictions remain reliable, not just lucky guesses.
+Using a Kaggle dataset, I stabilized highly skewed market pricing data with a log transformation, trained a Random Forest Regressor, and utilized 5-Fold Cross-Validation to ensure robust, reliable generalizations. I then deployed the architecture via FastAPI.
 
-Finally, I wrapped everything into a high-performance FastAPI web app. Users simply update the model's intelligence scores, size parameters, and response speeds, and the app instantly calculates a fair-market price prediction.
+What to input to test the live app:
 
-Repository in the comments.
+Intelligence/Coding Indices: Standard benchmark reasoning scores (0-100).
+
+Parameter Count: Model size in billions (e.g., 7B or 70B).
+
+Speed & Latency: Tokens Per Second (TPS) and Time to First Token (TTFT).
+
+Live app link and repository in the comments!
 
 #MachineLearning #DataScience #MLOps #FastAPI
+
+
+Try the live predictor app here:
+https://huggingface.co/spaces/sajesh-nair-ai/inference-cost-predictor
