@@ -1,3 +1,14 @@
+---
+title: AI Inference Cost Predictor
+emoji: 🧮
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
+
 # Enterprise AI Inference Cost Estimator
 
 An end-to-end MLOps predictive pipeline and web application that forecasts fair-market enterprise AI inference costs per million tokens based on model parameters, architectural specifications, and live performance benchmarks.
